@@ -1,0 +1,317 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #000000 0%, #242A32 100%);
+    font-family: 'Montserrat',sans-serif;
+    font-size: 15px;
+}
+body, button, input {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+.background {
+    display: flex;
+    min-height: 100vh;
+}
+.container {
+    flex: 0 1 750px;
+    margin: auto;
+    padding: 10px;
+}
+.screen {
+    position: relative;
+    background: #3A3F47;
+    border-radius: 15px;
+}
+.screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px #000000;
+    z-index: -1;
+}
+.screen-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #616571;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.screen-header-left {
+    margin-right: auto;
+}
+.screen-header-button {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+    border-radius: 8px;
+    background: #EEEEEE;
+}
+.screen-header-button.close {
+    background: #FF75A0;
+}
+.screen-header-button.maximize {
+    background: #FCE38A;
+}
+.screen-header-button.minimize {
+    background: #95E1D3;
+}
+.screen-header-right {
+    display: flex;
+}
+.screen-header-ellipsis {
+    width: 3px;
+    height: 3px;
+    margin-left: 2px;
+    border-radius: 8px;
+    background: #949AB0;
+}
+.screen-body {
+    display: flex;
+}
+.screen-body-item {
+    flex: 1;
+    padding: 50px;
+}
+.screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+}
+.app-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #4FCCA3;
+    font-size: 26px;
+}
+.app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: #4FCCA3;
+}
+.app-contact {
+    margin-top: auto;
+    font-size: 8px;
+    color: #949AB0;
+}
+.app-form-group {
+    margin-bottom: 15px;
+}
+.app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+}
+.app-form-group.buttons a {
+    margin-bottom: 0;
+    text-align: right;
+    text-decoration: none;
+}
+.app-form-group.buttons a:hover {
+    margin-bottom: 0;
+    text-align: right;
+    text-decoration: none;
+}
+.app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #949AB0;
+    color: #EEEEEE;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+}
+.app-form-group select{
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #949AB0;
+    color: #EEEEEE;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+}
+option {
+    background: #242A32;
+    color: #EEEEEE;
+}
+.app-form-control::placeholder {
+    color: #949AB0;
+}
+.app-form-control:focus {
+    border-bottom-color: #EEEEEE;
+}
+.app-form-button {
+    background: none;
+    border: none;
+    color: #4FCCA3;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+.app-form-button:hover {
+    color: #719192;
+}
+.app-form-button a {
+    background: none;
+    border: none;
+    color: #4FCCA3;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+.app-form-button a:hover {
+    color: #719192;
+}
+.dribbble {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+@media screen and (max-width: 520px) {
+    .screen-body {
+        flex-direction: column;
+    }
+    .screen-body-item.left {
+        margin-bottom: 25px;
+    }
+    .app-title {
+        flex-direction: row;
+    }
+    .app-title span {
+        margin-right: 15px;
+    }
+    .app-title:after {
+        display: none;
+    }
+}
+@media screen and (max-width: 500px) {
+    .screen-body {
+        padding: 25px;
+    }
+    .screen-body-item {
+        padding: 0;
+    }
+}
+.header {
+    color: #4FCCA3;
+    text-transform: uppercase;
+    font-family: 'Montserrat',sans-serif;
+    text-align: center;
+}
+.tbl-header {
+    background-color: #3A3F47;
+}
+.tbl-content {
+    height:250px;
+    overflow-x:auto;
+    margin-top: 0px;
+    border: 1px solid #3A3F47;
+}
+table {
+    width:100%;
+    table-layout: fixed;
+    text-align: center;
+}
+table th {
+    color: #4FCCA3;
+    text-transform: uppercase;
+}
+table td {
+    color: #EEEEEE;
+    border-bottom: 1px solid #3A3F47;
+}
+table td a {
+    vertical-align:middle;
+    color: #EEEEEE;
+    text-decoration: none;
+}
+table td a:hover {
+    vertical-align:middle;
+    color: #4FCCA3;
+    text-decoration: none;
+}
+section {
+    margin: 50px;
+}
+.footer {
+    clear: left;
+    text-align: center;
+    font-family: 'Montserrat',sans-serif;
+    color: #4FCCA3;
+}
+span {
+    position: relative;
+    left: 0px;
+    display: inline-flex;
+    height: 30px;
+    width: 100px;
+    margin: 0 15px;
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+span a {
+    font-size: 15px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+}
+span a:before, span a:after {
+    position: absolute;
+    content: "+ Add";
+    height: 30px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+span a:before {
+    color: #EEEEEE;
+    background: #4FCCA3;
+    border: none;
+    transform: rotateY(0deg) translateZ(10px);
+}
+span a:after {
+    color: #4FCCA3;
+    border: solid #4FCCA3;
+    transform: rotateX(90deg) translateZ(10px);
+}
+span a:hover {
+    transform: translateZ(-10px) rotateX(-90deg);
+}
+::-webkit-scrollbar {
+    width: 6px;
+} 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
